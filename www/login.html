@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Survey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<style type="text/css">
+  body {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-right: 200px;
+    padding-left:200px;
+  }
+  </style>
+
+</head>
+<body>
+
+
+<div class="hero-unit">
+  <div class="container-fluid">
+        <center>
+    <p><img src="img/codeface.png"/></p>
+    <h5>Framework and web frontend for analyzing <i>technical</i> and
+      <i>social</i> aspects of software development.</h5>
+
+    <p>To begin the survey, please enter your first name, last name, and project details. If you contributed
+    to multiple major revisions (e.g., v1.0 and v2.0), please enter only the most recent revision number. We kindly ask 
+    you to enter the name or alias that you use to identify yourself in the project. Throughout the survey we ensure
+    your anonymity, and your name is only necessary so that we can
+    identify your contributions to the project.</p>
+    <form class="form-inline" action="process_login.php" method="post">
+    <input type="text" name="fname" class="input-small" placeholder="First name" autofocus>
+    <input type="text" name="lname" class="input-small" placeholder="Last name">
+    <input type="text" name="project" class="input-small" placeholder="Project">
+    <input type="text" name="revision" class="input-small" placeholder="Revision">
+    <div>
+    </br>
+      <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" />
+    </div>
+    <div>  
+      <input type="text" class="input" autocomplete="off" name="captcha_code" size="5" maxlength="6" placeholder="Please type characters above"/>
+    </div>
+      </br><button type="submit" class="btn btn-primary" >Begin Survey</button>
+    </div>
+    </form>
+    </center>
+  </div>
+</div>
+
+</body>
+</html>
