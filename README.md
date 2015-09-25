@@ -41,6 +41,10 @@ devtools::install_github("AnalytixWare/ShinySky")
 
 * A filled database is required to run the application, a test database has been included in the repository
 
+* In the `conf` directory, two configuration files contain the parameters used to connect to the databases
+  * `user_database.conf` contains the parameters for connecting to the database storing the user data
+  * `survey_db.conf` contains the parameters for connecting to the database storing the survey responses
+
 * To load the test database, first create a database user with the username and password set as `codeface`,
 create a database called `user_data`, then navigate to the `User_db` directory and enter the following
 ```     
