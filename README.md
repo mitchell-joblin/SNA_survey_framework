@@ -5,14 +5,24 @@ Since the framework is written in R, it requires very little effort to take exis
 An example survey can be found here: http://rfhinf067.hs-regensburg.de/survey/?p.id=1&c.id=1.
 
 ## Required Programs
-* Install GNU R, mysql
+* Install GNU R, MySQL, and Apache HTTP server
 
   Add `deb http://cran.r-project.org/bin/linux/ubuntu precise/`
   to `/etc/apt/sources.list`, and execute
-```
-        sudo -E apt-get update
-        sudo -E apt-get install r-base r-base-dev
-```
+	```
+        ## First update system
+        sudo apt-get update
+
+        ## R
+        sudo apt-get install r-base r-base-dev
+
+        ## MySQL
+        sudo apt-get install mysql-server php5-mysql
+
+	## Apache webserver
+	sudo apt-get install apache2        
+	```
+
 ## R package dependencies
 
 * Install the required R packages in an R shell with
