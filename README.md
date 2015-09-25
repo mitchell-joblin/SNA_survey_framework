@@ -11,31 +11,31 @@ An example survey can be found here: http://rfhinf067.hs-regensburg.de/survey/?p
   to `/etc/apt/sources.list`, and execute
 
 ```
-        ## First update system
-        sudo apt-get update
+## First update system
+sudo apt-get update
 
-        ## R
-        sudo apt-get install r-base r-base-dev
+## R
+sudo apt-get install r-base r-base-dev
 
-        ## MySQL
-        sudo apt-get install mysql-server php5-mysql
+## MySQL
+sudo apt-get install mysql-server php5-mysql
 
-        ## Apache webserver
-        sudo apt-get install apache2        
+## Apache webserver
+sudo apt-get install apache2        
 ```
 
 ## R package dependencies
 
 * Install the required R packages in an R shell with
 ```
-        install.packages(c("igraph", "shiny", "yaml", "lubridate",
-                           "devtools", "logging", "plyr", "stringr",
-                           "RMySQL"), dependencies=T)
+install.packages(c("igraph", "shiny", "yaml", "lubridate",
+                   "devtools", "logging", "plyr", "stringr",
+                   "RMySQL"), dependencies=T)
 ```
 * Install the shinysky packages using devtools by opening an R console and entering:
-```	
-	library(devtools)
-	devtools::install_github("AnalytixWare/ShinySky")
+```
+library(devtools)
+devtools::install_github("AnalytixWare/ShinySky")
 ```
 ## Loading a test database
 
@@ -43,12 +43,12 @@ An example survey can be found here: http://rfhinf067.hs-regensburg.de/survey/?p
 
 * To load the test database, first create a database user (e.g., codeface) then navigate to the `User_db` directory and enter the following
 ```     
-        mysql -ucodeface -pcodeface < user_data.sql
+mysql -ucodeface -pcodeface < user_data.sql
 ```
 ## Running the Web application
 
 * Run the application by entering the following commands into an R terminal while in the project root directory
 ```
-        library(shiny)
-        runApp(".")
+library(shiny)
+runApp(".")
 ```
