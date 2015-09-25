@@ -10,7 +10,7 @@ An example survey can be found here: http://rfhinf067.hs-regensburg.de/survey/?p
   Add `deb http://cran.r-project.org/bin/linux/ubuntu precise/`
   to `/etc/apt/sources.list`, and execute
 
-        ```
+```
         ## First update system
         sudo apt-get update
 
@@ -22,33 +22,33 @@ An example survey can be found here: http://rfhinf067.hs-regensburg.de/survey/?p
 
         ## Apache webserver
         sudo apt-get install apache2        
-        ```
+```
 
 ## R package dependencies
 
 * Install the required R packages in an R shell with
-        ```
+```
         install.packages(c("igraph", "shiny", "yaml", "lubridate",
                            "devtools", "logging", "plyr", "stringr",
                            "RMySQL"), dependencies=T)
-        ```
+```
 * Install the shinysky packages using devtools by opening an R console and entering:
-        ```	
+```	
 	library(devtools)
 	devtools::install_github("AnalytixWare/ShinySky")
-        ```
+```
 ## Loading a test database
 
 * A filled database is required to run the application, a test database has been included in the repository
 
 * To load the test database, first create a database user (e.g., codeface) then navigate to the `User_db` directory and enter the following
-        ```     
+```     
         mysql -ucodeface -pcodeface < user_data.sql
-        ```
+```
 ## Running the Web application
 
 * Run the application by entering the following commands into an R terminal while in the project root directory
-        ```
+```
         library(shiny)
         runApp(".")
-        ```
+```
