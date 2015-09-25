@@ -41,14 +41,15 @@ devtools::install_github("AnalytixWare/ShinySky")
 
 * A filled database is required to run the application, a test database has been included in the repository
 
-* To load the test database, first create a database user (e.g., codeface), create a database called `survey`, then navigate to the `User_db` directory and enter the following
+* To load the test database, first create a database user with the username and password set as `codeface`,
+create a database called `user_data`, then navigate to the `User_db` directory and enter the following
 ```     
-## Create a database called survey
-mysql> CREATE DATABASE survey;
+## Create a database called user_data
+mysql> CREATE DATABASE user_data;
 mysql> exit;
 
 ## Load the test database
-mysql -ucodeface -pcodeface survey < user_data.sql
+mysql -ucodeface -pcodeface user_data < user_data.sql
 ```
 ## Running the Web application
 
