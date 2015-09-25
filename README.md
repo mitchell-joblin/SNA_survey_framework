@@ -18,8 +18,13 @@ An example survey can be found here: http://rfhinf067.hs-regensburg.de/survey/?p
 * Install the required R packages in an R shell with
 
         install.packages(c("igraph", "shiny", "yaml", "lubridate",
-                           "shinysky", "logging", "plyr", "stringr",
+                           "devtools", "logging", "plyr", "stringr",
                            "RMySQL"), dependencies=T)
+
+* Install the shinysky packages using devtools by opening an R console and entering:
+	
+	library(devtools)
+	devtools::install_github("AnalytixWare/ShinySky")
 
 ## Loading a test database
 
