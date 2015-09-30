@@ -62,3 +62,25 @@ mysql -ucodeface -pcodeface user_data < user_data.sql
 library(shiny)
 runApp(".")
 ```
+
+## Important files
+* server.R
+  * The server script for querying the database and presenting the dynamic content to the user interface
+
+* www/index.html
+  * The entire user interface for the survey, all survey questions, presentation of R graphics, and the response fields
+
+* www/login.html
+  * The login page where survey participants can enter their personal information
+
+* www/process_survey.php
+  * The processing script to store responses from the survey into the response database
+
+* conf/user_database.conf 
+  * The parameters for connecting to the database storing the user data
+  
+* conf/survey_db.conf 
+  * The parameters for connecting to the database storing the survey responses
+
+* datamodel/survey.mwb
+  * The MySQL database model for storing the survey responses
